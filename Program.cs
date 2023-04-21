@@ -15,7 +15,9 @@ LinqQueries queris = new LinqQueries();
 
 // ImprimirValores(queris.TodosLosLibrosQuePertenezcanAPython());
 // ImprimirValores(queris.TodosLosLibrosQuePertenezcanAJavaOrdenadosPorNombre());
-ImprimirValores(queris.TodosLosLibrosQueTienenMas450Paginas());
+// ImprimirValores(queris.TodosLosLibrosQueTienenMas450Paginas());
+// ImprimirValores(queris.TresLibrosRecientesCategorizadosEnJava());
+ImprimirValores(queris.TercerYCuartoLibroMayoresA400Paginas());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

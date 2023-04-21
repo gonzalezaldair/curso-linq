@@ -20,6 +20,8 @@ LinqQueries queris = new LinqQueries();
 // ImprimirValores(queris.TercerYCuartoLibroMayoresA400Paginas());
 // ImprimirValores(queris.SeleccionarTituloYNumPagPrimeros3Libros());
 // Console.WriteLine($" Cantidad libros Que tienen entre 200 y 500 paginas  {queris.NumeroDeLibrosEntre200Y500Pag()}");
+// Console.WriteLine($" Fecha de publicacion menor de los liros  {queris.MenorFechaLibroPublicado()}");
+Console.WriteLine($" Numero de paginas libro mayor  {queris.NumeroDePaginasLibroMayor()}");
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

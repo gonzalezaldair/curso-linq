@@ -9,7 +9,11 @@ LinqQueries queris = new LinqQueries();
 // ImprimirValores(queris.LibrosPaginasMayor250YCOnLaPalabraInAction());
 
 // Console.WriteLine($"Todos los libros tienes status: {queris.TodosLosLibrosTienenStatus()}");
-Console.WriteLine($"libros Publicados en 2005: {queris.LibrosPublicados2005()}");
+// Console.WriteLine($"libros Publicados en 2005: {queris.LibrosPublicados2005()}");
+
+
+
+ImprimirValores(queris.TodosLosLibrosQuePertenezcanAPython());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

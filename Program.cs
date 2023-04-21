@@ -40,8 +40,10 @@ LinqQueries queris = new LinqQueries();
 // ImprimirGrupo(queris.LibrosDespuesdel2000AgrupadosporAno());
 
 
-var diccionarioLookup = queris.DiccionariosDeLibrosPorLetra();
-ImprimirDiccionario(diccionarioLookup, 'A');
+// var diccionarioLookup = queris.DiccionariosDeLibrosPorLetra();
+// ImprimirDiccionario(diccionarioLookup, 'A');
+
+ImprimirValores(queris.LibrosDespuesdel2005conmasde500Pags());
 
 void ImprimirGrupo(IEnumerable<IGrouping<int,Book>> ListadeLibros)
 {

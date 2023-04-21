@@ -4,7 +4,9 @@ using curso_linq.Entidades;
 
 LinqQueries queris = new LinqQueries();
 
-ImprimirValores(queris.TodaLaColeccion());
+// ImprimirValores(queris.TodaLaColeccion());
+// ImprimirValores(queris.LibrosDespuesdel2000());
+ImprimirValores(queris.LibrosPaginasMayor250YCOnLaPalabraInAction());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

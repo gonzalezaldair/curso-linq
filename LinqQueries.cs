@@ -20,5 +20,18 @@ namespace curso_linq
         {
             return librosCollection;
         }
+
+        public IEnumerable<Book> LibrosDespuesdel2000()
+        {
+            // extension method
+            // return librosCollection.Where( libro => libro.PublishedDate.Year > 2000  );
+
+            return from l in librosCollection where l.PublishedDate.Year > 2000 select l;
+        }
+
+        public IEnumerable<Book> LibrosPaginasMayor250YCOnLaPalabraInAction()
+        {
+            return librosCollection.Where( libro => libro.PageCount > 250 && libro.Title.Contains("in Action")  );
+        }
     }
 }

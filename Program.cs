@@ -21,7 +21,12 @@ LinqQueries queris = new LinqQueries();
 // ImprimirValores(queris.SeleccionarTituloYNumPagPrimeros3Libros());
 // Console.WriteLine($" Cantidad libros Que tienen entre 200 y 500 paginas  {queris.NumeroDeLibrosEntre200Y500Pag()}");
 // Console.WriteLine($" Fecha de publicacion menor de los liros  {queris.MenorFechaLibroPublicado()}");
-Console.WriteLine($" Numero de paginas libro mayor  {queris.NumeroDePaginasLibroMayor()}");
+// Console.WriteLine($" Numero de paginas libro mayor  {queris.NumeroDePaginasLibroMayor()}");
+// var libroMenorPAgina = queris.LibroConMenorNumeroPAginas();
+// Console.WriteLine($" { libroMenorPAgina.Title } - { libroMenorPAgina.PageCount }");
+
+var libroReciente = queris.MayorFechaLibroPublicado();
+Console.WriteLine($" { libroReciente.Title } - { libroReciente.PublishedDate }");
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

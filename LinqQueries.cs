@@ -48,5 +48,15 @@ namespace curso_linq
         {
             return librosCollection.Where( libro => libro.Categories.Contains("Python")  );
         }
+
+        public IEnumerable<Book> TodosLosLibrosQuePertenezcanAJavaOrdenadosPorNombre()
+        {
+            return librosCollection.Where( libro => libro.Categories.Contains("Java")  ).OrderBy( libro => libro.Title);
+        }
+
+        public IEnumerable<Book> TodosLosLibrosQueTienenMas450Paginas()
+        {
+            return librosCollection.Where( libro => libro.PageCount > 450 ).OrderByDescending( libro => libro.PageCount);
+        }
     }
 }

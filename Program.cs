@@ -33,7 +33,27 @@ LinqQueries queris = new LinqQueries();
 // Console.WriteLine($"Libros publicados despues del 2015  \n{queris.TituloLibrosdespuesdel2015Concatenados()}");
 // Console.WriteLine($"Promedio Caracteres Titulos de los libros {queris.PromedioCaracteresTitulosLibros()}");
 
-Console.WriteLine($"Promedio de PAginas libros {queris.PromedioNumeroPAginas()}");
+// Console.WriteLine($"Promedio de PAginas libros {queris.PromedioNumeroPAginas()}");
+
+
+
+ImprimirGrupo(queris.LibrosDespuesdel2000AgrupadosporAno());
+
+void ImprimirGrupo(IEnumerable<IGrouping<int,Book>> ListadeLibros)
+{
+    foreach(var grupo in ListadeLibros)
+    {
+        Console.WriteLine("");
+        Console.WriteLine($"Grupo: { grupo.Key }");
+        Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+        foreach(var item in grupo)
+        {
+            Console.WriteLine("{0,-60} {1, 15} {2, 15}",item.Title,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
+        }
+    }
+}
+
+
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

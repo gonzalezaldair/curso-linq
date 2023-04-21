@@ -127,14 +127,19 @@ namespace curso_linq
         }
 
 
-        public double  PromedioCaracteresTitulosLibros()
+        public double PromedioCaracteresTitulosLibros()
         {
-            return librosCollection.Average( l => l.Title.Length );
+            return librosCollection.Average(l => l.Title.Length);
         }
 
-        public double  PromedioNumeroPAginas()
+        public double PromedioNumeroPAginas()
         {
-            return librosCollection.Where( l => l.PageCount > 0).Average( l => l.PageCount );
+            return librosCollection.Where(l => l.PageCount > 0).Average(l => l.PageCount);
+        }
+
+        public IEnumerable<IGrouping<int, Book>> LibrosDespuesdel2000AgrupadosporAno()
+        {
+            return librosCollection.Where(p => p.PublishedDate.Year >= 2000).GroupBy(p => p.PublishedDate.Year);
         }
 
     }

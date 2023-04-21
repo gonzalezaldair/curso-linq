@@ -25,8 +25,12 @@ LinqQueries queris = new LinqQueries();
 // var libroMenorPAgina = queris.LibroConMenorNumeroPAginas();
 // Console.WriteLine($" { libroMenorPAgina.Title } - { libroMenorPAgina.PageCount }");
 
-var libroReciente = queris.MayorFechaLibroPublicado();
-Console.WriteLine($" { libroReciente.Title } - { libroReciente.PublishedDate }");
+// var libroReciente = queris.MayorFechaLibroPublicado();
+// Console.WriteLine($" { libroReciente.Title } - { libroReciente.PublishedDate }");
+
+
+// Console.WriteLine($" Suma de PAginas {queris.SumaPAginasLibrosEntre200y500()}");
+Console.WriteLine($"Libros publicados despues del 2015  \n{queris.TituloLibrosdespuesdel2015Concatenados()}");
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

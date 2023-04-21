@@ -33,5 +33,15 @@ namespace curso_linq
         {
             return librosCollection.Where( libro => libro.PageCount > 250 && libro.Title.Contains("in Action")  );
         }
+
+        public bool TodosLosLibrosTienenStatus()
+        {
+            return librosCollection.All( libro => libro.Status != string.Empty );
+        }
+
+        public bool LibrosPublicados2005()
+        {
+            return librosCollection.Any( libro => libro.PublishedDate.Year == 2005 );
+        }
     }
 }

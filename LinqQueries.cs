@@ -68,5 +68,10 @@ namespace curso_linq
         {
             return librosCollection.Where( libro => libro.PageCount > 400 ).Take(4).Skip(2);
         }
+
+        public IEnumerable<Book> SeleccionarTituloYNumPagPrimeros3Libros()
+        {
+            return librosCollection.Take(3).Select( libro => new Book{ Title = libro.Title, PageCount = libro.PageCount});
+        }
     }
 }

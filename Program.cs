@@ -17,15 +17,16 @@ LinqQueries queris = new LinqQueries();
 // ImprimirValores(queris.TodosLosLibrosQuePertenezcanAJavaOrdenadosPorNombre());
 // ImprimirValores(queris.TodosLosLibrosQueTienenMas450Paginas());
 // ImprimirValores(queris.TresLibrosRecientesCategorizadosEnJava());
-ImprimirValores(queris.TercerYCuartoLibroMayoresA400Paginas());
+// ImprimirValores(queris.TercerYCuartoLibroMayoresA400Paginas());
+ImprimirValores(queris.SeleccionarTituloYNumPagPrimeros3Libros());
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
-    Console.WriteLine("{0,-60} {1,15} {2,15} {3,25}\n", "Titulo", "# PAginas", "Fecha Publicacion", "Categorias");
+    Console.WriteLine("{0,-60} {1,15} {2,15} \n", "Titulo", "# PAginas", "Fecha Publicacion");
 
     foreach(var item in listaLibros)
     {
-        Console.WriteLine("{0,-60} {1,15} {2,15} {3,25}", item.Title,item.PageCount,item.PublishedDate.ToShortDateString(), String.Join(",", item.Categories));
+        Console.WriteLine("{0,-60} {1,15} {2,15} ", item.Title,item.PageCount,item.PublishedDate.ToShortDateString());
     }
 }
 

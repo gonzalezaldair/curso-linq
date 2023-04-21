@@ -18,7 +18,8 @@ LinqQueries queris = new LinqQueries();
 // ImprimirValores(queris.TodosLosLibrosQueTienenMas450Paginas());
 // ImprimirValores(queris.TresLibrosRecientesCategorizadosEnJava());
 // ImprimirValores(queris.TercerYCuartoLibroMayoresA400Paginas());
-ImprimirValores(queris.SeleccionarTituloYNumPagPrimeros3Libros());
+// ImprimirValores(queris.SeleccionarTituloYNumPagPrimeros3Libros());
+// Console.WriteLine($" Cantidad libros Que tienen entre 200 y 500 paginas  {queris.NumeroDeLibrosEntre200Y500Pag()}");
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {

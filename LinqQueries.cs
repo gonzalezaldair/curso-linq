@@ -126,5 +126,16 @@ namespace curso_linq
             });
         }
 
+
+        public double  PromedioCaracteresTitulosLibros()
+        {
+            return librosCollection.Average( l => l.Title.Length );
+        }
+
+        public double  PromedioNumeroPAginas()
+        {
+            return librosCollection.Where( l => l.PageCount > 0).Average( l => l.PageCount );
+        }
+
     }
 }

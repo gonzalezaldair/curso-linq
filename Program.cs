@@ -30,7 +30,10 @@ LinqQueries queris = new LinqQueries();
 
 
 // Console.WriteLine($" Suma de PAginas {queris.SumaPAginasLibrosEntre200y500()}");
-Console.WriteLine($"Libros publicados despues del 2015  \n{queris.TituloLibrosdespuesdel2015Concatenados()}");
+// Console.WriteLine($"Libros publicados despues del 2015  \n{queris.TituloLibrosdespuesdel2015Concatenados()}");
+// Console.WriteLine($"Promedio Caracteres Titulos de los libros {queris.PromedioCaracteresTitulosLibros()}");
+
+Console.WriteLine($"Promedio de PAginas libros {queris.PromedioNumeroPAginas()}");
 
 void ImprimirValores(IEnumerable<Book> listaLibros)
 {
